@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../css/Quiz.css";
 
 const Quiz = () => {
   const [questions] = useState([
@@ -70,32 +71,41 @@ const Quiz = () => {
   };
 
   return (
-    <div>
-      <h1>Quiz: Test Your Knowledge about Meltdown and Spectre</h1>
+    <div className="quiz-container">
+      <h1 className="quiz-heading">
+        Quiz: Test Your Knowledge about Meltdown and Spectre
+      </h1>
       {showScore ? (
         <div>
-          <h3>
+          <h3 className="quiz-score">
             Your Score: {score} / {questions.length}
           </h3>
-          <button onClick={handleRetryButtonClick}>Retry</button>
+          <button className="quiz-button" onClick={handleRetryButtonClick}>
+            Retry
+          </button>
           <Link to="/">
-            <button>Home</button>
+            <button className="quiz-button">Home</button>
           </Link>
         </div>
       ) : (
         <div>
-          <h3>{questions[currentQuestion].question}</h3>
-          <div>
+          <h3 className="quiz-question">
+            {questions[currentQuestion].question}
+          </h3>
+          <div className="quiz-options">
             {questions[currentQuestion].options.map((option, index) => (
               <button
                 key={index}
+                className="quiz-option"
                 onClick={() => handleAnswerButtonClick(option)}
               >
                 {option}
               </button>
             ))}
           </div>
-          <p>{questions[currentQuestion].explanation}</p>
+          <p className="quiz-explanation">
+            {questions[currentQuestion].explanation}
+          </p>
         </div>
       )}
     </div>

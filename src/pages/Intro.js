@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/Intro.css";
 
 const Intro = () => {
   return (
-    <div>
-      <h1>Intro</h1>
-      <p1>
+    <div className="intro-container">
+      <h1 className="intro-heading">Intro</h1>
+      <p className="intro-content">
         Meltdown and Spectre exploit critical vulnerabilities in modern
         processors. These hardware vulnerabilities allow programs to steal data
         which is currently processed on the computer. While programs are
@@ -17,15 +18,15 @@ const Intro = () => {
         and Spectre work on personal computers, mobile devices, and in the
         cloud. Depending on the cloud provider's infrastructure, it might be
         possible to steal data from other customers.
-      </p1>
-      <div>
+      </p>
+      <div className="intro-link">
         <Link to="/meltdown">Meltdown</Link>
       </div>
-      <div>
+      <div className="intro-link">
         <Link to="/spectre">Spectre</Link>
       </div>
       <Link to="/">
-        <button>Back</button>
+        <button className="intro-button">Back</button>
       </Link>
     </div>
   );

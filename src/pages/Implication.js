@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../css/Implication.css";
 
 const Implication = () => {
   const [selectedImplication, setSelectedImplication] = useState(null);
@@ -7,36 +8,57 @@ const Implication = () => {
     setSelectedImplication(implication);
   };
   return (
-    <div>
-      <h1>Implication On Network</h1>
+    <div className="implication-container">
+      <h1 className="implication-heading">Implication On Network</h1>
       <div>
         {/* Render clickable elements for each case */}
-        <button onClick={() => handleClick("Data Leakage")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Data Leakage")}
+        >
           Data Leakage
         </button>
-        <button onClick={() => handleClick("Cloud Environments")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Cloud Environments")}
+        >
           Cloud Environments
         </button>
-        <button onClick={() => handleClick("Shared Hosting Environments")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Shared Hosting Environments")}
+        >
           Shared Hosting Environments
         </button>
-        <button onClick={() => handleClick("Network Security Appliances")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Network Security Appliances")}
+        >
           Network Security Appliances
         </button>
-        <button onClick={() => handleClick("Cryptographic Keys")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Cryptographic Keys")}
+        >
           Cryptographic Keys
         </button>
-        <button onClick={() => handleClick("Performance Impact")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Performance Impact")}
+        >
           Performance Impact
         </button>
-        <button onClick={() => handleClick("Patch Management")}>
+        <button
+          className="implication-button"
+          onClick={() => handleClick("Patch Management")}
+        >
           Patch Management
         </button>
       </div>
       <div>
         {selectedImplication && (
           <div>
-            <h3>{selectedImplication}</h3>
+            <h3 className="implication-answer">{selectedImplication}</h3>
 
             {selectedImplication === "Data Leakage" && (
               <p>
@@ -115,7 +137,7 @@ const Implication = () => {
       </div>
       <div>
         <Link to="/">
-          <button>Back</button>
+          <button className="implication-button">Back</button>
         </Link>
       </div>
     </div>

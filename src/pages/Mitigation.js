@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "../css/Mitigation.css";
 
 const Mitigation = () => {
   const [showDetails, setShowDetails] = useState({
@@ -18,16 +19,20 @@ const Mitigation = () => {
     setShowDetails({ ...showDetails, [key]: !showDetails[key] });
   };
   return (
-    <div>
-      <h1>Mitigation Strategies for Meltdown and Spectre</h1>
+    <div className="mitigation-container">
+      <h1 className="mitigation-heading">
+        Mitigation Strategies for Meltdown and Spectre
+      </h1>
       <h3>Meltdown Mitigation</h3>
-      <p>
+      <p className="mitigation-content">
         Mitigating Meltdown involves applying patches and updates to the
         operating system and processor firmware. Key mitigation strategies
         include:
       </p>
-      <ul>
-        <li>Applying Kernel Page Table Isolation (KPTI) patches for Linux</li>
+      <ul className="mitigation-list">
+        <li className="mitigation-list-item">
+          Applying Kernel Page Table Isolation (KPTI) patches for Linux
+        </li>
         <li>Installing Windows patches for Meltdown</li>
         <li>Updating macOS to address Meltdown vulnerabilities</li>
       </ul>
@@ -53,7 +58,10 @@ const Mitigation = () => {
       </p>
       <ul>
         <li>
-          <button onClick={() => toggleDetails("segmentation")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("segmentation")}
+          >
             Segmentation
           </button>
           {showDetails.segmentation && (
@@ -65,7 +73,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("firewall")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("firewall")}
+          >
             Firewall Configuration
           </button>
           {showDetails.firewall && (
@@ -77,7 +88,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("idsIps")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("idsIps")}
+          >
             Intrusion Detection/Prevention Systems (IDS/IPS)
           </button>
           {showDetails.idsIps && (
@@ -88,7 +102,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("vpns")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("vpns")}
+          >
             Virtual Private Networks (VPNs)
           </button>
           {showDetails.vpns && (
@@ -100,7 +117,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("nac")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("nac")}
+          >
             Network Access Control (NAC)
           </button>
           {showDetails.nac && (
@@ -111,7 +131,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("trafficInspection")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("trafficInspection")}
+          >
             Traffic Inspection
           </button>
           {showDetails.trafficInspection && (
@@ -123,7 +146,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("encryption")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("encryption")}
+          >
             Encryption
           </button>
           {showDetails.encryption && (
@@ -135,7 +161,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("patchManagement")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("patchManagement")}
+          >
             Patch Management
           </button>
           {showDetails.patchManagement && (
@@ -147,7 +176,10 @@ const Mitigation = () => {
           )}
         </li>
         <li>
-          <button onClick={() => toggleDetails("monitoringLogging")}>
+          <button
+            className="mitigation-button"
+            onClick={() => toggleDetails("monitoringLogging")}
+          >
             Network Monitoring and Logging
           </button>
           {showDetails.monitoringLogging && (
@@ -193,7 +225,7 @@ const Mitigation = () => {
         Meltdown and Spectre vulnerabilities.
       </p>
       <Link to="/">
-        <button>Back</button>
+        <button className="mitigation-button">Back</button>
       </Link>
     </div>
   );

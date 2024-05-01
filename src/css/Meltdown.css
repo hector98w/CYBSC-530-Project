@@ -1,0 +1,46 @@
+.meltdown-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .meltdown-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .meltdown-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .meltdown-answer {
+    font-weight: bold;
+  }
+  
+  .meltdown-list {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  
+  .meltdown-list-item {
+    margin-bottom: 10px;
+  }
+  
+  .meltdown-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .meltdown-button:hover {
+    background-color: #0056b3;
+  }
+  

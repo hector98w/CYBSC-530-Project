@@ -1,0 +1,46 @@
+.spectre-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .spectre-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .spectre-content {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .spectre-answer {
+    font-weight: bold;
+  }
+  
+  .spectre-list {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  
+  .spectre-list-item {
+    margin-bottom: 10px;
+  }
+  
+  .spectre-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .spectre-button:hover {
+    background-color: #0056b3;
+  }
+  
